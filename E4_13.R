@@ -1,1 +1,0 @@
-Weekly <- read.csv("./data/Weekly.csv")

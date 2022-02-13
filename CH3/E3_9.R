@@ -1,9 +1,10 @@
 Auto <- read.csv("./data/Auto.csv")
-Auto<- Auto[,-1]
+# Auto <- Auto[,-9]  # delete name column
 View(Auto)
 Auto = na.omit(Auto)
 #9.a
-Auto[,9] = as.numeric(factor(Auto[,9]))
+Auto[,4] = as.numeric(factor(Auto[,4]))  # turn horsepower into numeric
+Auto[,9] = as.numeric(factor(Auto[,9]))  # turn name into numeric
 pairs(Auto)
 #9.b
 cor(subset(Auto, select=-name))

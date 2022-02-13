@@ -15,3 +15,5 @@ abline(fit)  # draw a line
 # (c)
 par(mfrow=c(2,2))  # divide the frame into four part to display
 plot(fit)
+
+detach(Auto)
