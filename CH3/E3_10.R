@@ -19,3 +19,5 @@ plot(predict(lm.fit2), rstudent(lm.fit2))
 plot(hatvalues(lm.fit2))
 abline(h = 0.0075, col = "red")
 
+detach(Carseats)
+
