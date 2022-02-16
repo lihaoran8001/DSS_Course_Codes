@@ -4,3 +4,6 @@
 DSS_Course_Codes.Rproj
 .RData
 .Rhistory
+*.icloud
+data/.DS_Store
+data/.DS_Store
