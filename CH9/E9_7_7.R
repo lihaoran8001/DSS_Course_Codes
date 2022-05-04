@@ -13,3 +13,14 @@ library(e1071)
 set.seed(1)
 tune.out = tune(svm, mpglevel ~ ., data = dat, kernel = "linear", ranges = list(cost = c(0.001,0.01, 0.1, 1, 5, 10, 100)))
 summary(tune.out)
+
+#c
+set.seed(2)
+tune.out = tune(svm, mpglevel ~ ., data = Auto, kernel = "polynomial", ranges = list(cost = c(0.1, 
+                                                                                              1, 5, 10), degree = c(2, 3, 4)))
+summary(tune.out)
+
+set.seed(3)
+tune.out = tune(svm, mpglevel ~ ., data = Auto, kernel = "radial", ranges = list(cost = c(0.1, 
+                                                                                          1, 5, 10), gamma = c(0.01, 0.1, 1, 5, 10, 100)))
+summary(tune.out)
